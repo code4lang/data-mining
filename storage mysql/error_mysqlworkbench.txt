@@ -1,0 +1,2 @@
+unhandled exceptions: current profile has no wmi enabled 
+could not acquire management access for administration: runtimeerror: target hodt is configured as windows, but seems to be a different os. please review the connection settings

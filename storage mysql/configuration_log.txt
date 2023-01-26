@@ -1,0 +1,57 @@
+Beginning configuration step: Writing configuration file
+
+Saving my.ini configuration file...
+Saved my.ini configuration file.
+Ended configuration step: Writing configuration file
+
+Beginning configuration step: Updating Windows Firewall rules
+
+Attempting to delete a Windows Firewall rule with command: netsh.exe advfirewall firewall delete rule name="Port 3306" protocol=TCP localport=3306
+
+Se eliminaron 1 reglas.
+Aceptar
+
+
+Adding a Windows Firewall rule for MySQL80 on port 3306.
+Attempting to add a Windows Firewall rule with command: netsh.exe advfirewall firewall add rule name="Port 3306" protocol=TCP localport=3306 dir=in action=allow
+Aceptar
+
+
+Successfully added the Windows Firewall rule.
+Attempting to delete a Windows Firewall rule with command: netsh.exe advfirewall firewall delete rule name="Port 33060" protocol=TCP localport=33060
+
+Se eliminaron 1 reglas.
+Aceptar
+
+
+Adding a Windows Firewall rule for MySQL80 on port 33060.
+Attempting to add a Windows Firewall rule with command: netsh.exe advfirewall firewall add rule name="Port 33060" protocol=TCP localport=33060 dir=in action=allow
+Aceptar
+
+
+Successfully added the Windows Firewall rule.
+Ended configuration step: Updating Windows Firewall rules
+
+Beginning configuration step: Adjusting Windows service
+
+Attempting to grant Network Service require filesystem permissions.
+Granted permissions.
+Updating existing service
+Existing service updated
+Ended configuration step: Adjusting Windows service
+
+Beginning configuration step: Starting the server
+
+Attempting to start service MySQL80...
+Successfully started service MySQL80.
+Waiting until a connection to MySQL Server 8.0.31 can be established (with a maximum of 10 attempts)...
+Retry 1: Attempting to connect to Mysql@localhost:3306 with user root with a password...
+Successfully connected to MySQL Server 8.0.31.
+Ended configuration step: Starting the server
+
+Beginning configuration step: Updating the Start menu link
+
+Attempting to verify command-line client shortcut.
+Verified command-line client shortcut.
+Verified command-line client shortcut.
+Ended configuration step: Updating the Start menu link
